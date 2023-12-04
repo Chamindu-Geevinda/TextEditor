@@ -55,4 +55,22 @@ var contHistory = []
         }
     }
  }
- 
+ function redo() {
+    if (current > 0) {
+        current++
+        if (contHistory[current] != undefined) {
+            document.getElementById('editor').innerHTML = contHistory[current]
+        }
+    }
+ }
+
+ document.querySelectorAll ('#editor').forEach(function (element) {
+    element.addEventListener('input', function() {
+        current++
+        if (current < contHistory.length){
+            contHistory = contHistory.slice(0, current)
+        }
+
+        contHistory.push(document.getElementById('editor').innerHTML)
+    })
+ })
