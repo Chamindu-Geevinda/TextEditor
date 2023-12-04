@@ -44,3 +44,15 @@ document.querySelectorAll('.alignjust').forEach(function(element) {
         document.getElementById('editor').style.textAlign = 'justify'
     })
 })
+var contHistory = []
+ var current = 0
+
+ function undo() {
+    if (current > 0) {
+        current--
+        if (contHistory[current] != undefined) {
+            document.getElementById('editor').innerHTML = contHistory[current]
+        }
+    }
+ }
+ 
