@@ -34,3 +34,8 @@ document.querySelectorAll('.alignRight').forEach(function(element) {
         document.getElementById('editor').style.textAlign = 'right'
     })
 })
+document.querySelectorAll('.alignCenter').forEach(function(element) {
+    element.addEventListener('click', function() {
+        document.getElementById('editor').style.textAlign = 'center'
+    })
+})
