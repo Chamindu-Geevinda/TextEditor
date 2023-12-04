@@ -39,3 +39,8 @@ document.querySelectorAll('.alignCenter').forEach(function(element) {
         document.getElementById('editor').style.textAlign = 'center'
     })
 })
+document.querySelectorAll('.alignjust').forEach(function(element) {
+    element.addEventListener('click', function() {
+        document.getElementById('editor').style.textAlign = 'justify'
+    })
+})
