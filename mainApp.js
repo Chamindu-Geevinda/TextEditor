@@ -24,3 +24,8 @@ document.querySelectorAll('.fontColor').forEach(function(element) {
         editor.innerHTML = content.replace(highlightedText, span.outerHTML)
     })
 })
+document.querySelectorAll('.alignLeft').forEach(function(element) {
+    element.addEventListener('click', function() {
+        document.getElementById('editor').style.textAlign = 'left'
+    })
+}
