@@ -28,4 +28,9 @@ document.querySelectorAll('.alignLeft').forEach(function(element) {
     element.addEventListener('click', function() {
         document.getElementById('editor').style.textAlign = 'left'
     })
-}
+})
+document.querySelectorAll('.alignRight').forEach(function(element) {
+    element.addEventListener('click', function() {
+        document.getElementById('editor').style.textAlign = 'right'
+    })
+})
